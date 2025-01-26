@@ -50,7 +50,7 @@ exports.getAllOrders = async (req, res) => {
 
 exports.getAllOrdersByMenu = async (req, res) => {
     try {
-        const { menuId } = req.params
+        const {menuId} = req.params
         const allOrders = await order.findAll({ where: { id: menuId } });
         // Send a success response 
         res.status(200).json({
@@ -67,13 +67,13 @@ exports.getAllOrdersByMenu = async (req, res) => {
 
 exports.updateOrder = async (req, res) => {
     try {
-        const { id } = req.params;
+        const {id} = req.params;
         const oneOrder = await order.findByPk(id);
         if (!oneOrder) {
             return res.status(404).json("order not found");
         }
 
-        const { quantity, total } = req.body;
+        const {quantity, total} = req.body;
         const updatedOrder = await oneOrder.update({ quantity, total });
 
         res.status(200).json({
@@ -87,7 +87,7 @@ exports.updateOrder = async (req, res) => {
 
 exports.deleteOrder = async (req, res) => {
     try {
-        const { id } = req.params;
+        const {id} = req.params;
         const oneOrder = await order.findByPk(id);
         if (!oneOrder) {
             return res.status(404).json("order not found");
