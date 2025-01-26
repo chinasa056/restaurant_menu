@@ -7,7 +7,7 @@ router.post("/menu", createMenu);
 
 router.get("/menu", getAll);
 
-router.get("/menu", getOne);
+router.get("/menu/:id", getOne);
 
 router.put("/menu/:id", updateMenu);
 
