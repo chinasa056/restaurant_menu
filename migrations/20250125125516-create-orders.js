@@ -11,10 +11,10 @@ module.exports = {
       menuId: {
         type: Sequelize.UUID,
         allowNull:false,
-        references: {
-          model: 'menu_items',
-          key: 'id'
-        },
+        // references: {
+        //   model: 'menu_items',
+        //   key: 'id'
+        // },
         onUpdate: 'CASCADE',
         onDelete: 'CASCADE'
       },

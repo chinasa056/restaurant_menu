@@ -34,8 +34,8 @@ orders.init(
   {
     // Other model options go here
     sequelize, // We need to pass the connection instance
-    modelName: 'Orders', 
-    tableName: "Orders",
+    modelName: 'orders', 
+    tableName: "orders",
     timestamps:true
   },
 );

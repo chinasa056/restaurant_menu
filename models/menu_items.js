@@ -1,29 +1,4 @@
-// 'use strict';
-// const {
-//   Model
-// } = require('sequelize');
-// module.exports = (sequelize, DataTypes) => {
-//   class Menu_Items extends Model {
-//     /**
-//      * Helper method for defining associations.
-//      * This method is not a part of Sequelize lifecycle.
-//      * The `models/index` file will call this method automatically.
-//      */
-//     static associate(models) {
-//       // define association here
-//     }
-//   }
-//   Menu_Items.init({
-//     name: DataTypes.STRING,
-//     Description: DataTypes.STRING,
-//     StoreEmail: DataTypes.STRING,
-//     price: DataTypes.DECIMAL
-//   }, {
-//     sequelize,
-//     modelName: 'Menu_Items',
-//   });
-//   return Menu_Items;
-// };
+
 
 const { Sequelize, DataTypes, Model } = require('sequelize');
 const sequelize = require("../sequelize");
@@ -58,8 +33,8 @@ menu_items.init(
   {
     // Other model options go here
     sequelize, // We need to pass the connection instance
-    modelName: 'Menu_items', 
-    tableName:"Menu_items",
+    modelName: 'menu_items', 
+    tableName:"menu_items",
     timestamps:true
   },
 );
