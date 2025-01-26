@@ -38,7 +38,7 @@ exports.getAllOrders = async (req, res) => {
         // Send a success response 
         res.status(200).json({
             message: 'All orders',
-            data: allProducts
+            data: allOrders
         })
     } catch (error) {
         res.status(500).json({
