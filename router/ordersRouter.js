@@ -4,7 +4,7 @@ const router = require("express").Router();
 
 router.post("/order/:menuId", createOrder)
 router.get("/order", getAllOrders)
-router.get("/order/:id", getAllOrdersByMenu)
+router.get("/order/:menuId", getAllOrdersByMenu)
 router.put("/order/:id", updateOrder)
 router.delete("/order/:id", deleteOrder)
 
