@@ -2,10 +2,12 @@ const express = require("express");
 const port = 2112;
 const sequelize = require("./sequelize");
 const router = require("./router/menuRouter");
+const orderRouter = require("./router/ordersRouter")
 
 const app = express();
 app.use(express.json());
-app.use(router)
+app.use(router);
+app.use(orderRouter);
 
 const server = async () => {
     try {
