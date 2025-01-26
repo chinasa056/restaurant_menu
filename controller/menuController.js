@@ -64,7 +64,7 @@ exports.getOne = async(req,res) => {
 }
 exports.updateMenu = async (req, res) => {
     try {
-        const { id } = req.params;
+        const {id} = req.params;
         const updatedMenu = await menu.findByPk(id);
         if (!updatedMenu) {
             return res.status(404).json("menu not found");
@@ -85,7 +85,7 @@ exports.updateMenu = async (req, res) => {
 exports.deleteMenu = async (req, res) => {
     try {
         // Get id from params
-        const { id } = req.params;
+        const {id} = req.params;
         const menuById = await menu.findByPk(id);
 
         if (!menuById) {
