@@ -51,8 +51,7 @@ exports.getAllOrders = async (req, res) => {
 exports.getAllOrdersByMenu = async (req, res) => {
     try {
         const {menuId} = req.params
-        const allOrders = await order.findAll({ where: { id: menuId } });
-        // Send a success response 
+        const allOrders = await order.findAll({ where: { menuId:menuId } });
         res.status(200).json({
             message: 'All orders in a particular menu',
             data: allOrders
