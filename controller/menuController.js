@@ -45,7 +45,8 @@ exports.getAll = async (req, res) => {
 
 exports.getOne = async(req,res) => {
     try {
-        const oneMenu = await menu.findByPk(req.params.id);
+        const {id} = req.params
+        const oneMenu = await menu.findByPk(id);
         if (!oneMenu) {
             return res.status(404).json("menu not found")
         }
@@ -57,7 +58,7 @@ exports.getOne = async(req,res) => {
     } catch (error) {
         res.status(500).json({
             message: "internal server error",
-            error: error.message
+            error: error
         })
     }
 }
